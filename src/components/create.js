@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 export class Create extends React.Component {
 
@@ -20,6 +21,17 @@ export class Create extends React.Component {
         ${this.state.title},
         ${this.state.cover},
         ${this.state.author}`);
+
+        const book = {
+            title:this.state.title,
+            state:this.state.cover,
+            author:this.state.author
+        }
+        //a post request to the server (sending a ”book” object to the server).
+        axios.post('http://localhost:4000/api/books',book)
+        .then()
+        .catch();
+
         this.setState({
             title:'',
             cover:'',
