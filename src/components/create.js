@@ -24,7 +24,7 @@ export class Create extends React.Component {
 
         const book = {
             title:this.state.title,
-            state:this.state.cover,
+            cover:this.cover.cover,
             author:this.state.author
         }
         //a post request to the server (sending a ”book” object to the server).
